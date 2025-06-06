@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infrastructure Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+ <style>
+.infrastructure-section {
+  padding: 60px 40px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.infra-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 50px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.infra-left {
+  flex: 1 1 58%;
+}
+
+.infra-left h2 {
+  font-size: 30.89px;
+  font-weight: 600;
+  color: #032949;
+  margin-bottom: 20px;
+}
+
+.infra-left p {
+  font-size: 17.23px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.infra-top {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.tile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.infra-tile-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.map-box {
+  flex: 1.5;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.infra-bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.infra-bottom img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+}
+
+/* Right Image Styling */
+.infra-right {
+  flex: 1 1 42%;
+  min-width: 350px;
+  display: flex;
+  align-items: stretch;
+}
+
+.infra-right img {
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .infra-wrapper {
+    flex-direction: column;
+  }
+
+  .infra-right img {
+    height: 300px;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="infrastructure-section">
+  <div class="infra-wrapper">
+
+    <!-- Left Content -->
+    <div class="infra-left">
+      <h2>Infrastructure</h2>
+      <p>
+        We have a state-of-the-art factory at a prime governmental industrial park called the Industrial Growth Centre at Changsari, Guwahati where our technicians are equipped with the updated technological devices and machinery to work at the best of their capacity.
+      </p>
+
+      <!-- Tile Column + Map -->
+      <div class="infra-top">
+        <div class="tile-column">
+          <img src="images/icon-delivery.png" alt="Tile 1" class="infra-tile-img" />
+          <img src="images/icon-inventory.png" alt="Tile 2" class="infra-tile-img" />
+          <img src="images/icon-solution.png" alt="Tile 3" class="infra-tile-img" />
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12037.922177066652!2d91.68419088701575!3d26.232579100052785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a51006104ee69%3A0x18a56e7c421bc684!2sIndomech%20Industries%20Manufacturing%20Unit!5e0!3m2!1sen!2sus!4v1749222083998!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Bottom 2 Tiles -->
+      <div class="infra-bottom">
+        <img src="images/icon-tracking.png" alt="Tile 4" class="infra-tile-img" />
+        <img src="images/icon-design.png" alt="Tile 5" class="infra-tile-img" />
+      </div>
+    </div>
+
+    <!-- Right Factory Image -->
+    <div class="infra-right">
+      <img src="images/factory.jpeg" alt="Factory Image" />
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

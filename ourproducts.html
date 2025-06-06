@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+    }
+
+    .products-section {
+  position: relative;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.products-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('images/products-bg.jpg') no-repeat center center/cover;
+  opacity: 0.4; /* Change this value for more/less opacity */
+  z-index: -1;
+}
+
+
+    .products-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products-section h2 {
+      font-size: 30.89px;
+      font-weight: 600;
+      color: #032949;
+      margin-bottom: 20px;
+    }
+
+    .products-subtitle {
+      font-size: 17.23px;
+      font-weight: 400;
+      color: #686868;
+      margin-bottom: 60px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .product-card {
+      width: 100%;
+      max-width: 350px;
+      height: 360px;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0; right: 0;
+      height: 100%;
+      background: linear-gradient(to top, rgb(0, 18, 51), rgba(0, 15, 42, 0.36));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .product-icon-title {
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    .product-icon-title img {
+      height: 60px;
+      margin-bottom: 0px;
+    }
+
+    .product-icon-title h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
+    }
+
+    .product-desc {
+      font-size: 16px;
+      margin-top: 0px;
+      color: #ddd;
+      opacity: 0;
+      transform: translateY(2px);
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    /* Hover Effect (desktop only) */
+    @media (min-width: 769px) {
+      .product-card:hover .product-icon-title {
+        transform: translateY(-10px);
+      }
+
+      .product-card:hover .product-desc {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Fixes */
+    @media (max-width: 768px) {
+      .products-section {
+        padding: 50px 15px;
+      }
+
+      .product-desc {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+      .product-icon-title {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="products-section">
+  <div class="products-container">
+    <h2>Our Products</h2>
+    <p class="products-subtitle">
+      Driven by technology and inspired by sustainability, we deliver cutting-edge power innovations.
+      From backup assurance to green energy transitions, our offerings power your progress.
+    </p>
+
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card" style="background-image: url('images/product1.jpg');">
+        <div class="product-overlay">
+          <div class="product-icon-title">
+            <img src="images/icon-generator.png" alt="Generator Icon">
+            <h3>Silent Generators</h3>
+          </div>
+          <p class="product-desc">Revolutionar manufacturer of gensets from 5 to 160 kva</p>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card" style="background-image: url('images/product2.jpg');">
+        <div class="product-overlay">
+          <div class="product-icon-title">
+            <img src="images/icon-solar.png" alt="Solar Icon">
+            <h3>Solar Power</h3>
+          </div>
+          <p class="product-desc">Solar Panel <br>and Street lights</p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card" style="background-image: url('images/product3.jpg');">
+        <div class="product-overlay">
+          <div class="product-icon-title">
+            <img src="images/icon-infra.png" alt="Infra Icon">
+            <h3>Infrastructural Projects</h3>
+          </div>
+          <p class="product-desc">End-to-end infrastructure development and installation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
