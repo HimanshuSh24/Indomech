@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clients & Partners</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+
+ 
+
+    /* === Our Clients Section === */
+    .our-clients {
+      background-color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .our-clients h2 {
+      font-size: 30.89px; /* 30.89pt */
+      color: #032949;
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .clients-grid img {
+      max-width: 100%;
+      max-height: 110px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .clients-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* === Associate Principle Company Section === */
+    .associates {
+      background-color: #f1f1f1;
+       padding: 5px 20px 60px;
+       text-align: center;
+    }
+
+    .associates h2 {
+      font-size: 20px; /* 19.95pt */
+      color: #062c53;
+      padding: 20px
+    }
+
+    .associate-logos {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .associate-row {
+      display: flex;
+      gap: 80px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .associate-row img {
+      max-width: 280px;
+      max-height: 190px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .associate-row img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1024px) {
+      .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .associate-row {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .associate-row img {
+        max-width: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Our Clients Section -->
+<section class="our-clients">
+  <h2>Our Clients</h2>
+  <div class="clients-grid">
+    <img src="images/logos/govenment of meghalaya.png" alt="Govt of Meghalaya">
+    <img src="images/logos/oil india.png" alt="Oil India">
+    <img src="images/logos/rbi.png" alt="RBI">
+    <img src="images/logos/ongc.png" alt="ONGC">
+    <img src="images/logos/nrl.png" alt="NRL">
+    <img src="images/logos/aegcl.png" alt="AEGCL">
+    <img src="images/logos/bse assam.png" alt="SEBA">
+    <img src="images/logos/nhm.png" alt="National Health Mission">
+    <img src="images/logos/Amchong Tea Estate.png" alt="Amchong Tea Estate">
+    <img src="images/logos/neepco.png" alt="NEEPCO">
+    <img src="images/logos/army public school.png" alt="Army Public School">
+    <img src="images/logos/LnT.png" alt="L&T Construction">
+    <img src="images/logos/Shri.png" alt="Kala Kendra">
+    <img src="images/logos/Sns.png" alt="Steel n Style">
+  </div>
+</section>
+
+<!-- Associate Principle Company Section -->
+<section class="associates">
+  <h2>Associate Principle Company</h2>
+  <div class="associate-logos">
+    <div class="associate-row">
+      <img src="images/logos/eicher.png" alt="Eicher">
+    <img src="images/logos/kohler.png" alt="Kohler">
+    <img src="images/logos/tata power.png" alt="Tata Solar">
+    </div>
+    <div class="associate-row">
+      <img src="images/logos/mtu.png" alt="Force + MTU">
+    <img src="images/logos/crompton.png" alt="Crompton Greaves">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indomech</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    header {
+  background-color: #032949;
+  padding: 0;
+  position: relative; /* Ensure it's positioned */
+  z-index: 1000; /* Ensure it's above the video */
+}
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #032949;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #f58220;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#"class="active">About Us</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="whoweare"></div>
+<script>
+  fetch("whoweare.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("whoweare").innerHTML = data;
+    });
+</script>
+<div id="ourhistory"></div>
+<script>
+  fetch("ourhistory.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("ourhistory").innerHTML = data;
+    });
+</script>
+<div id="founder"></div>
+<script>
+  fetch("founder.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("founder").innerHTML = data;
+    });
+</script>
+<div id="vision"></div>
+<script>
+  fetch("vision.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("vision").innerHTML = data;
+    });
+</script>
+<div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

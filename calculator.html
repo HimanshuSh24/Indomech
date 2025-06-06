@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electricity Consumption Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* Header */
+    header {
+      background-color: #032949;
+      padding: 0;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #032949;
+        display: none;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav {
+      flex: 1;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: flex-end;
+      gap: 30px;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #f58220;
+    }
+
+    /* Calculator Section */
+    .calculator-section {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calculator-box {
+      background: linear-gradient(to bottom, #eae6df, #d5cdc3);
+      padding: 40px 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .calculator-box h2 {
+      font-size: 30.59px;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 0px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      flex: 0 0 140px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .price-wrap {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .price-wrap span {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .price-wrap input {
+      width: 100%;
+    }
+
+    .calculate-btn {
+      margin-top: 20px;
+      width: 100%;
+      background: #f28c1f;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .calculate-btn:hover {
+      background: #e67808;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="#"class="active">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- CALCULATOR SECTION -->
+<section class="calculator-section">
+  <div class="calculator-box">
+    <h2>Daily Appliance Electricity<br>Consumption Calculator</h2>
+
+    <div class="form-group">
+      <label for="applianceName">Appliance Name:</label>
+      <input type="text" id="applianceName" placeholder="e.g. Fan">
+    </div>
+
+    <div class="form-group">
+      <label for="appliancePower">Appliance Power:</label>
+      <input type="number" id="appliancePower" placeholder="e.g. 75">
+      <select>
+        <option>watt (W)</option>
+        <option>kilowatt (kW)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="usage">Usage:</label>
+      <input type="number" id="usage" placeholder="e.g. 5">
+      <select>
+        <option>hours per day</option>
+        <option>minutes per day</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Electricity Price:</label>
+      <div class="price-wrap">
+        <span>₹</span>
+        <input type="number" id="price" placeholder="e.g. 8">
+        <span>per kWh</span>
+      </div>
+    </div>
+
+    <button class="calculate-btn">Calculate</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

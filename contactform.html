@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .contact-left {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .contact-left h2 {
+      font-size: 30.89px;
+      color: #032949;
+      margin-bottom: -10px;
+      font-weight: 600;
+    }
+
+    .underline {
+      height: 4px;
+      width: 500px;
+      background-color: #f58220;
+      margin: 10px 0 30px 0;
+      border-radius: 3px;
+
+    }
+
+    .contact-left h4 {
+      font-size: 19.95px;
+      margin-bottom: 30px;
+      color: #032949;
+      font-weight: 600;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 12px;
+    }
+
+    .contact-detail i {
+      font-size: 19.95px;
+      color: #032949;
+      margin-top: 4px;
+      min-width: 20px;
+    }
+
+    .contact-detail .info-text {
+      font-size: 17.23px;
+      color: #686868;
+      line-height: 1.5;
+    }
+
+    .info-text strong,
+    .info-text b {
+      color: #686868;
+    }
+
+    .contact-right {
+      flex: 1;
+      min-width: 350px;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-right label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+      width: 100%;
+      padding: 15px 5px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+
+    .contact-right .half {
+      display: flex;
+      gap: 50px;
+    }
+
+    .contact-right .half .field {
+      flex: 1;
+    }
+
+    .contact-right button {
+      background-color: #f58220;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+
+      .underline {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="contact-section">
+  <!-- Left Column -->
+  <div class="contact-left">
+    <h2>Contact Us</h2>
+    <div class="underline"></div>
+    <h4>Need a Free Quote?<br>Feel Free to Contact Us</h4>
+
+    <div class="contact-detail">
+      <i class="fas fa-phone-alt"></i>
+      <div class="info-text">
+        <strong>OFFICE:</strong> +91 94355 53245<br>
+        <strong>SALES COORDINATOR:</strong> +91 92879 87404<br>
+        <strong>MANAGER:</strong> +91 6003 901211
+      </div>
+    </div>
+
+    <div class="contact-detail">
+      <i class="fas fa-envelope"></i>
+      <div class="info-text">
+        indomechpower@gmail.com<br>
+        info@indomech.com
+      </div>
+    </div>
+
+    <div class="contact-detail">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="info-text">
+        <b>OFFICE –</b> 4TH FLOOR, GS TOWER, CHATRIBARI AT ROAD, GUWAHATI 781001, ASSAM, BHARAT<br><br>
+        <b>MANUFACTURING UNIT –</b> First plot, IGC, AIIDC Industrial Area, Changsari Kali Pahar 781101, Assam, Bharat
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column -->
+  <div class="contact-right">
+    <form>
+      <div class="half">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="First" required>
+        </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Last">
+        </div>
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 99999 99999" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message ..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

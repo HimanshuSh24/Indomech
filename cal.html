@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electricity Consumption Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+     
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .calculator-box {
+      background: linear-gradient(to bottom, #eae6df, #d5cdc3);
+      padding: 40px 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .calculator-box h2 {
+      font-size: 30.89px;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+      margin-bottom: 25px;
+      margin-top: 0px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      flex: 0 0 140px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .price-wrap {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .price-wrap span {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .price-wrap input {
+      width: 100%;
+    }
+
+    .calculate-btn {
+      margin-top: 20px;
+      width: 100%;
+      background: #f28c1f;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .calculate-btn:hover {
+      background: #e67808;
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator-box">
+  <h2>Daily Appliance Electricity<br>Consumption Calculator</h2>
+
+  <div class="form-group">
+    <label for="applianceName">Appliance Name:</label>
+    <input type="text" id="applianceName" placeholder="e.g. Fan">
+  </div>
+
+  <div class="form-group">
+    <label for="appliancePower">Appliance Power:</label>
+    <input type="number" id="appliancePower" placeholder="e.g. 75">
+    <select>
+      <option>watt (W)</option>
+      <option>kilowatt (kW)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="usage">Usage:</label>
+    <input type="number" id="usage" placeholder="e.g. 5">
+    <select>
+      <option>hours per day</option>
+      <option>minutes per day</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Electricity Price:</label>
+    <div class="price-wrap">
+      <span>₹</span>
+      <input type="number" id="price" placeholder="e.g. 8">
+      <span>per kWh</span>
+    </div>
+  </div>
+
+  <button class="calculate-btn">Calculate</button>
+</div>
+
+</body>
+</html>

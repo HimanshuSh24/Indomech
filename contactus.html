@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indomech</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    header {
+  background-color: #032949;
+  padding: 0;
+  position: relative; /* Ensure it's positioned */
+  z-index: 1000; /* Ensure it's above the video */
+}
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #032949;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #f58220;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#"class="active">Contact Us</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="contactform"></div>
+<!-- MAP SECTION START -->
+<section style="padding: 60px 20px; background: #f8f8f8;">
+  <div style="max-width: 1200px; margin: auto;">
+   
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+      
+      <!-- Location 1 -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8511.77226049925!2d91.67364258394247!3d26.2370064689899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a51006104ee69%3A0x18a56e7c421bc684!2sIndomech%20Industries%20Manufacturing%20Unit!5e0!3m2!1sen!2sus!4v1749248509557!5m2!1sen!2sus" 
+        width="100%" 
+        height="350" 
+        style="border:0; border-radius: 10px; flex: 1 1 500px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+      <!-- Location 2 -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5407378213417!2d91.74151437519788!3d26.179082577092032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5b83a7e7ab9d%3A0xb4487b1393ff5432!2sIndomech%20Industries!5e0!3m2!1sen!2sus!4v1749247893160!5m2!1sen!2sus" 
+        width="100%" 
+        height="350" 
+        style="border:0; border-radius: 10px; flex: 1 1 500px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+  </div>
+</section>
+<!-- MAP SECTION END -->
+
+
+<script>
+  fetch("contactform.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("contactform").innerHTML = data;
+    });
+</script>
+<div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

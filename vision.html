@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission & Vision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+    }
+
+    .mv-section {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .mv-card {
+      position: relative;
+      flex: 1 1 480px;
+      border-radius: 25px;
+      background-image: url('images/mission.png'); /* replace with your image path */
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      padding-top: 0px;
+      padding-bottom: 40px;
+    }
+    .mv-card2 {
+      position: relative;
+      flex: 1 1 480px;
+      border-radius: 25px;
+      background-image: url('images/visionn.jpg'); /* replace with your image path */
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      padding-top: 0px;
+      padding-bottom: 40px;
+    }
+
+    .mv-overlay {
+      background: rgba(255, 255, 255, 0);
+      padding: 30px 25px;
+      height: 100%;
+    }
+
+    .mv-header {
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      right: 300px;
+      background-color: #032949;
+      color: #fff;
+      padding: 10px;
+      font-size: 30.89px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0px;
+    }
+     .mv-header2 {
+      position: absolute;
+      top: 30px;
+      left: 300px;
+      right: 0px;
+      background-color: #032949;
+      color: #fff;
+      padding: 10px;
+      font-size: 30.89px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0px;
+    }
+     .mv-header3 {
+      position: absolute;
+      top: 30px;
+      left: 500px;
+      right: 0px;
+      background-color: #032949;
+      color: #fff;
+      padding: 33px;
+      font-size: 30.89px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0px;
+    }
+      .mv-header4 {
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      right: 500px;
+      background-color: #032949;
+      color: #fff;
+      padding: 33px;
+      font-size: 30.89px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 0px;
+    }
+
+    .mv-overlay p {
+      font-size: 19px;
+      line-height: 1.3;
+      color: #032949;
+      margin: 0;
+      text-align: justify;
+      margin-top: 100px ;
+    }
+
+    @media (max-width: 768px) {
+      .mv-section {
+        flex-direction: column;
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="mv-section">
+  <!-- Mission Card -->
+  <div class="mv-card">
+    <div class="mv-header">Mission</div><div class="mv-header3">  </div>
+    <div class="mv-overlay">
+      <p>
+        Our mission is to revolutionize energy solutions by harnessing the power of solar energy and developing noise-free generators, promoting sustainability and environmental harmony for a cleaner, greener future.
+      </p>
+    </div>
+  </div>
+
+  <!-- Vision Card -->
+  <div class="mv-card2">
+    <div class="mv-header4">  </div><div class="mv-header2">Vision</div>
+    <div class="mv-overlay">
+      <p>
+        To lead the transition of North-East India towards a sustainable future powered by renewable energy, where every individual and organization has access to reliable, clean power solutions. Through honesty, integrity, and quality, we strive to be the premier provider of solar energy and generator systems, empowering communities worldwide to thrive while preserving our planet for future generations.
+      </p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
