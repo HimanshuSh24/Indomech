@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indomech</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    header {
+  background-color: #032949;
+  padding: 0;
+  position: relative; /* Ensure it's positioned */
+  z-index: 1000; /* Ensure it's above the video */
+}
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #032949;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #f58220;
+}
+/* gallery*/
+
+.installations-banner {
+      position: relative;
+      background: url('images/abg.jpg') center/cover no-repeat;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .installations-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(29, 63, 85, 0.85);
+      z-index: 0;
+    }
+    .installations-banner .content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .installations-banner h1 {
+      position: relative;
+      color: #fff;
+      font-size: 30.89px;
+      font-weight: 600;
+       margin-bottom: -30px;
+    }
+    .installations-banner p {
+     position: relative;
+      color: #c7c2c2;
+      font-size: 17.23px;
+      font-weight: 500;
+ 
+    }
+    .founder-note {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #333;
+    }
+
+    .founder-note h2 {
+      font-size: 30.89px;
+      font-weight: 600;
+      color: #032949;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .founder-note h2::after {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 4px;
+      background-color: #f58220;
+      margin-top: 1px;
+      border-radius: 3px;
+    }
+
+    .founder-note p {
+      font-size: 17.23px;
+      line-height: 1.8;
+      color: #6a6a6a;
+      margin: 15px 0;
+    }
+
+    .highlight {
+        font-size: 19.95px;
+      font-weight: 600;
+      color: #032949;
+      font-style: italic;
+    }
+
+    .orange {
+      color: #f58220;
+    }
+
+</style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="projects.html"class="active">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="installations-banner">
+  <h1>Our Landmark Installations Across North-East India</h1><br>
+  <p>
+    Empowering industries, government, and communities with reliable and clean energy solutions.
+  </p>
+</section>
+<section class="founder-note">
+  <h2>Projects</h2>
+  <p>
+    With a legacy of excellence and innovation, Indomech has successfully delivered <b>power projects across key sectors like Oil & Gas, 
+Healthcare, Banking, Railways, Real Estate, and Public Utilities.</b><br>
+Our <b>Silent Generators and Solar Energy Systems</b> continue to drive progress across <b>government, semi-government, and private 
+organizations,</b> fostering a greener, more sustainable future.</p>
+</section>
+<div id="projecttable1"></div>
+<script>
+  fetch("projecttable1.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("projecttable1").innerHTML = data;
+    });
+</script>
+<div id="projecttable"></div>
+<script>
+  fetch("projecttable.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("projecttable").innerHTML = data;
+    });
+</script>
+
+<div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

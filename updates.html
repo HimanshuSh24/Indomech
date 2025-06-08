@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+    }
+    * { box-sizing: border-box; }
+     /* Header */
+    header {
+  background-color: #032949;
+  padding: 0;
+  position: relative; /* Ensure it's positioned */
+  z-index: 1000; /* Ensure it's above the video */
+}
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #032949;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #f58220;
+}
+
+
+
+.notification-section1 {
+      padding: 40px 0px;
+      
+      margin: auto;
+    }
+    .notification-section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .notification-heading {
+      background-color: #f58220;
+      color: #fff;
+      font-size: 30.89px;
+      font-weight: 600;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .notification-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.08);
+    }
+
+    .notification-card:nth-child(even) {
+      background-color: #efeeee;
+    }
+
+    .notification-image img {
+      width: 150px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .notification-content {
+      flex: 1;
+    }
+
+    .notification-content h4 {
+      font-size: 17px;
+      color: #032949;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .notification-content h5 {
+      font-size: 15px;
+      color: #032949;
+      margin: 5px 0 10px;
+      font-weight: 700;
+    }
+
+    .notification-content p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#"class="active">Updates</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  <section class="notification-section1">
+    <div class="notification-heading">UPDATES</div>
+ </section>
+ <section class="notification-section">
+    <div class="notification-card">
+      <div class="notification-image">
+        <img src="images/factory.jpeg" alt="Notification 1">
+      </div>
+      <div class="notification-content">
+        <h4>NOTIFICATION HEADING</h4>
+        <h5>TOPIC OF THE UPDATE</h5>
+        <p>Sample Text Sample Text Sample Text Sample Text Sample Text <br>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text.</p>
+      </div>
+    </div>
+
+    <div class="notification-card">
+      <div class="notification-image">
+        <img src="images/factory.jpeg" alt="Notification 2">
+      </div>
+      <div class="notification-content">
+        <h4>NOTIFICATION HEADING</h4>
+        <h5>TOPIC OF THE UPDATE</h5>
+        <p>Sample Text Sample Text Sample Text Sample Text Sample Text <br>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text.</p>
+      </div>
+    </div>
+
+    <div class="notification-card">
+      <div class="notification-image">
+        <img src="images/factory.jpeg" alt="Notification 3">
+      </div>
+      <div class="notification-content">
+        <h4>NOTIFICATION HEADING</h4>
+        <h5>TOPIC OF THE UPDATE</h5>
+        <p>Sample Text Sample Text Sample Text Sample Text Sample Text <br>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text.</p>
+      </div>
+    </div>
+
+    <div class="notification-card">
+      <div class="notification-image">
+        <img src="images/factory.jpeg" alt="Notification 4">
+      </div>
+      <div class="notification-content">
+        <h4>NOTIFICATION HEADING</h4>
+        <h5>TOPIC OF THE UPDATE</h5>
+        <p>Sample Text Sample Text Sample Text Sample Text Sample Text <br>Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text.</p>
+      </div>
+    </div>
+  </section>
+  <div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indomech</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+    }
+
+    /* Header */
+    header {
+  background-color: #032949;
+  padding: 0;
+  position: relative; /* Ensure it's positioned */
+  z-index: 1000; /* Ensure it's above the video */
+}
+/* Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #032949;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  flex: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #f58220;
+}
+.section {
+      padding: 60px 0;
+      width: 100%;
+      background-color: #ffffff;
+    }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .header-row .left-pill,
+    .header-row .right-pill {
+      padding: 2px 200px;
+      font-weight: 600;
+      font-size: 30.89px;
+      border-radius: 30px;
+   
+      color: #fff;
+    }
+    .header-row .left-pill {
+      background-color: #032949;
+      border-radius: 0 30px 30px 0;
+    }
+    .header-row .right-pill {
+      background-color: #f58220;
+      border-radius: 30px 0 0 30px;
+    }
+
+    @media (max-width: 768px) {
+     
+      .header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+    }
+     .contact-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-title {
+      font-size: 30.89px;
+      font-weight: 600;
+      color: #032949;
+      margin-bottom: 5px;
+    }
+
+    .underline {
+      width: 500px;
+      height: 4px;
+      background: #f58220;
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 0px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    button {
+      background-color: #f58220;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .map-section iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: 1;
+      }
+    }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/Logo.png" alt="Indomech Logo">
+    </div>
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#"class="active">Solutions</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="solution"></div>
+<div class="section">
+    <div class="header-row">
+      <div class="left-pill">GENSETS</div>
+      <div style="flex-grow: 1; height: 4px; background-color: #032949; margin: 0 20px; border-radius: 2px; "></div>
+      <div class="right-pill">Our Products</div>
+    </div>
+     <div id="gen-a"></div>
+<script>
+  fetch("gen-a.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("gen-a").innerHTML = data;
+    });
+</script>
+    <div id="gen-b"></div>
+<script>
+  fetch("gen-b.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("gen-b").innerHTML = data;
+    });
+</script>
+
+<section class="contact-section">
+  <h2 class="contact-title">Feel Free to Contact Us</h2>
+  <div class="underline"></div>
+
+  <form action="#" method="post">
+    <input type="text" name="first_name" placeholder="First">
+    <input type="text" name="last_name" placeholder="Last">
+    <input type="email" name="email" placeholder="example@email.com" class="full-width">
+    <input type="tel" name="phone" placeholder="+91 99999 99999">
+    <textarea name="message" placeholder="Type your message ..." class="full-width"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+</section>
+<!-- MAP SECTION START -->
+<section style="padding: 60px 20px; background: #f8f8f8;">
+  <div style="max-width: 1200px; margin: auto;">
+   
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+      
+      <!-- Location 1 -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8511.77226049925!2d91.67364258394247!3d26.2370064689899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a51006104ee69%3A0x18a56e7c421bc684!2sIndomech%20Industries%20Manufacturing%20Unit!5e0!3m2!1sen!2sus!4v1749248509557!5m2!1sen!2sus" 
+        width="100%" 
+        height="350" 
+        style="border:0; border-radius: 10px; flex: 1 1 500px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+      <!-- Location 2 -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5407378213417!2d91.74151437519788!3d26.179082577092032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5b83a7e7ab9d%3A0xb4487b1393ff5432!2sIndomech%20Industries!5e0!3m2!1sen!2sus!4v1749247893160!5m2!1sen!2sus" 
+        width="100%" 
+        height="350" 
+        style="border:0; border-radius: 10px; flex: 1 1 500px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+  </div>
+</section>
+   <div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('mainNav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

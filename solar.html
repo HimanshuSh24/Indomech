@@ -114,6 +114,7 @@ nav {
     <div class="logo">
       <img src="images/Logo.png" alt="Indomech Logo">
     </div>
+
     <!-- Hamburger Button -->
     <button class="menu-toggle" id="menuToggle">
       <i class="fas fa-bars"></i>
@@ -123,7 +124,7 @@ nav {
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="#"class="active">Solutions</a></li>
+        <li><a href="solutions.html"class="active">Solutions</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="updates.html">Updates</a></li>
@@ -133,12 +134,12 @@ nav {
     </nav>
   </div>
 </header>
-<div id="solution"></div>
+<div id="so"></div>
 <script>
-  fetch("solution.html")
+  fetch("so.html")
     .then(response => response.text())
     .then(data => {
-      document.getElementById("solution").innerHTML = data;
+      document.getElementById("so").innerHTML = data;
     });
 </script>
 <div id="footer-container"></div>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indomech Gensets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+    .genset-section {
+      padding: 30px 20px;
+      background: #fff;
+      margin-bottom: 30px;
+    }
+
+    .genset-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .genset-image {
+      flex: 1 1 500px;
+      text-align: center;
+    }
+
+    .genset-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    .genset-text {
+      flex: 1 1 500px;
+    }
+
+    .genset-text h2 {
+      color: #032949;
+      font-size: 19.95px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .genset-text p {
+      font-size: 17.23px;
+      line-height: 1.7;
+      color: #686868;
+      margin-bottom: 20px;
+    }
+
+    .genset-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .genset-features li {
+      font-size: 17px;
+      font-weight: 600;
+      color: #f58220;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .genset-features li span {
+      font-size: 20px;
+      line-height: 1;
+      color: #f58220;
+    }
+
+    @media (max-width: 768px) {
+      .genset-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .genset-text {
+        text-align: center;
+      }
+
+      .genset-features li {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Indomech Gensets Section -->
+  <section class="genset-section">
+    <div class="genset-container">
+      <div class="genset-image">
+        <img src="images/gen.png" alt="Indomech Genset">
+      </div>
+      <div class="genset-text">
+        <h2>INDOMECH GENSETS</h2>
+        <p>
+          While power cuts eat into your profits, an inefficient DG set will simply add to your losses.
+          Indomech DG sets have been designed to ensure you an efficient power supply.
+          This also assures you years of hassle free operations.
+        </p>
+        <ul class="genset-features">
+          <li><span>✔</span> <i>EUROPEAN<br>TECHNOLOGY DRIVEN</i></li>
+          <li><span>✔</span> <i>24x7<br>SERVICE SUPPORT</i></li>
+          <li><span>✔</span> <i>CONNECTED<br>GENSETS</i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

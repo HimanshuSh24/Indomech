@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Models</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+    }
+
+    .models-section {
+      padding: 60px 0;
+      background: #f4f4f4;
+    }
+
+    .models-header {
+      text-align: right;
+      margin-bottom: 80px;
+      margin-top: 20px;
+    }
+
+    .models-header h2 {
+      background: #032949;
+      color: #fff;
+      padding: 10px 200px;
+      display: inline-block;
+      border-radius: 30px 0 0 30px;
+      font-size: 30.89px;
+      font-weight: 600;
+    }
+
+    .models-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px 80px;
+    }
+
+    .model-card {
+      background: #f9f9f9;
+      border-radius: 40px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+    
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      min-height: 220px;
+    }
+
+    .model-card::after {
+      content: "";
+      background: url('images/squares.jpg') no-repeat right center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    .model-card img {
+      width: 250px;
+      height: auto;
+      margin-right: 30px;
+      z-index: 2;
+    }
+
+    .model-info {
+      z-index: 2;
+    }
+
+    .model-info span {
+      display: block;
+      font-size: 19.95px;
+      font-weight: 600;
+      color: #032949;
+      margin-bottom: 5px;
+    }
+
+    .model-info strong {
+      color: #e30613;
+      font-size: 25px;
+      font-weight: 600;
+    }
+
+    .model-info small {
+      display: block;
+      margin-top: 5px;
+      color: #777;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .models-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .models-header {
+        text-align: center;
+      }
+
+      .models-header h2 {
+        border-radius: 30px;
+        padding: 10px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="models-section">
+  <div class="models-header">
+    <h2>AVAILABLE MODELS</h2>
+  </div>
+  <div class="models-grid">
+    <div class="model-card">
+      <img src="images/k.png" alt="5 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>5 KVA Ganset</strong>
+        <small>12VDC 35 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/k.png" alt="10 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>10 KVA Ganset</strong>
+        <small>12VDC 65 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/k.png" alt="15 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>15 KVA Ganset</strong>
+        <small>12VDC 35 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/k.png" alt="20 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>20 KVA Ganset</strong>
+        <small>12VDC 88 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="25 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>25 KVA Ganset</strong>
+        <small>12VDC 88 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="30 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>30 KVA Ganset</strong>
+        <small>12VDC 88 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="45 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>45 KVA Ganset</strong>
+        <small>12VDC 88 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="60 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>60 KVA Ganset</strong>
+        <small>12VDC 88 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="82.5 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>82.5 KVA Ganset</strong>
+        <small>12VDC 100 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="100 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>100 KVA Ganset</strong>
+        <small>12VDC 100 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="125 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>125 KVA Ganset</strong>
+        <small>12VDC 120 AH</small>
+      </div>
+    </div>
+    <div class="model-card">
+      <img src="images/E.png" alt="160 KVA Genset">
+      <div class="model-info">
+        <span>MODEL</span>
+        <strong>160 KVA Ganset</strong>
+        <small>12VDC 120 AH</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

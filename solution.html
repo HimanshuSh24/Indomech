@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+    }
+    .section {
+      padding: 60px 0;
+      width: 100%;
+    }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .header-row .left-pill,
+    .header-row .right-pill {
+      padding: 2px 200px;
+      font-weight: 600;
+      font-size: 30.89px;
+      border-radius: 30px;
+   
+      color: #fff;
+    }
+    .header-row .left-pill {
+      background-color: #032949;
+      border-radius: 0 30px 30px 0;
+    }
+    .header-row .right-pill {
+      background-color: #f58220;
+      border-radius: 30px 0 0 30px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      
+    }
+     .silent-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .silent-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+      
+    }
+    .product-card-horizontal {
+      display: flex;
+      width: 500px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .product-card-horizontal img {
+      width: 180px;
+      height: 180px;
+      border-radius: 15px;
+    }
+    .product-card-horizontal .details {
+      flex: 1;
+    }
+    .product-card-horizontal h4 {
+      font-size: 19.95px;
+      color: #032949;
+      font-weight: 600;
+    }
+    .product-card-horizontal p {
+      font-size: 17.23px;
+      color: #333;
+      margin-top: 5px;
+    }
+    
+    .product-card-vertical {
+      flex: 1 1 22%;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+    .product-card-vertical img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+    .product-card-vertical h4 {
+      font-size: 19.95px;
+      color: #032949;
+      font-weight: 600;
+    }
+    .product-card-vertical p {
+      font-size: 17.23px;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      .product-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .product-card-vertical {
+        flex: 1 1 100%;
+      }
+      .header-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="header-row">
+      <div class="left-pill">SILENT GENERATORS</div>
+      <div style="flex-grow: 1; height: 4px; background-color: #032949; margin: 0 20px; border-radius: 2px; "></div>
+      <div class="right-pill">Our Products</div>
+    </div>
+    <div class="container">
+      <div class="silent-grid">
+        <div class="silent-row">
+        <div class="product-card-horizontal">
+          <img src="images/generator1.jpeg" alt="Kohler">
+          <div class="details">
+            <h4>Kohler Silent Generators</h4>
+            <p><strong>Capacity:</strong> 5 kVA</p>
+            <p>Compact, portable, ideal for small businesses, homes, and emergency power.</p>
+          </div>
+        </div>
+        <div class="product-card-horizontal">
+          <img src="images/generator2.jpeg" alt="Volvo">
+          <div class="details">
+            <h4>Volvo Eicher Silent Generators</h4>
+            <p><strong>Capacity:</strong> 25 kVA to 160 kVA</p>
+            <p>Mid-capacity silent gensets for commercial, industrial, and institutional needs.</p>
+          </div>
+        </div>
+        <div class="silent-row" style="justify-content: center;"></div>
+        <div class="product-card-horizontal">
+          <img src="images/generator3.jpeg" alt="MTU">
+          <div class="details">
+            <h4>MTU Force (Rolls Royce) Silent Generators</h4>
+            <p><strong>Capacity:</strong> 300 kVA onwards</p>
+            <p>High-capacity industrial gensets for critical infrastructure, factories, and large estates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="section" style="background: #e2e1e1;">
+    <div style="width: 100%; display: flex; justify-content: flex-end; padding: 0; margin-bottom: 60px; margin-top: 10px;">
+      <div class="right-pill" style="background-color: #032949; border-radius: 30px 0 0 30px; padding: 2px 200px; color: #ffffff; font-weight: 600; font-size: 30.89px;">SOLAR POWER SYSTEMS</div>
+    </div>
+    <div class="container">
+      <div class="card-row">
+        <div class="product-card-vertical">
+          <img src="images/solar1.jpg" alt="RCC Roof">
+          <h4>RCC Roof Systems</h4>
+          <p>Clean solar installation for concrete roofs -- offices, factories, commercial buildings.</p>
+        </div>
+        <div class="product-card-vertical">
+          <img src="images/solar2.jpg" alt="Tin Shed">
+          <h4>Tin Shed Systems</h4>
+          <p>Affordable solar setups <br>for sheds, workshops,<br> rural utilities, etc.</p>
+        </div>
+        <div class="product-card-vertical">
+          <img src="images/solar3.jpg" alt="Ground Mounted">
+          <h4>Ground Mounted Systems</h4>
+          <p>Large scale projects, community solar parks, industrial projects.</p>
+        </div>
+        <div class="product-card-vertical">
+          <img src="images/solar4.jpg" alt="Floating">
+          <h4>Water Floating Solar Solutions</h4>
+          <p>For water bodies, reservoirs, ponds--maximizing unused spaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full-width System Types Section -->
+<section style="width: 100%; margin: 0; padding: 0;">
+  <img src="images/types.jpg" alt="System Types Available" style="width: 100%; display: block;">
+</section>
+</body>
+</html>
